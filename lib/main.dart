@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
+import 'configurations/app_theme.dart';
 import 'navigation/route_generator.dart';
 
 void main() {
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
       child: BlocBuilder<SettingsCubit, AppStates>(
         builder: (context, state) {
           return MaterialApp(
-            theme: SettingsCubit.instance.isDarkMode ? ThemeData.dark() : ThemeData.light(),
+            theme: SettingsCubit.instance.isDarkMode ? ThemeData.dark() : lightTheme,
             locale: SettingsCubit.instance.locale,
             onGenerateRoute: generateRoute,
             initialRoute: AppRoutes.main,

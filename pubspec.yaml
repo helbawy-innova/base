@@ -48,6 +48,7 @@ dependencies:
   permission_handler: ^11.3.1
   url_launcher: ^6.3.1
   encrypt: ^5.0.3
+  mocktail: ^1.0.4
 
 dev_dependencies:
   flutter_test:
